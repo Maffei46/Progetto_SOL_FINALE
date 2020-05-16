@@ -1,0 +1,80 @@
+==11342== Memcheck, a memory error detector
+==11342== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==11342== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==11342== Command: ./exe.o ./tests/test1.txt
+==11342== Parent PID: 11341
+==11342== 
+==11342== 
+==11342== HEAP SUMMARY:
+==11342==     in use at exit: 1,646 bytes in 4 blocks
+==11342==   total heap usage: 1,166 allocs, 1,162 frees, 547,350 bytes allocated
+==11342== 
+==11342== 36 bytes in 1 blocks are still reachable in loss record 1 of 4
+==11342==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11342==    by 0x401E34E: strdup (strdup.c:42)
+==11342==    by 0x40188F1: _dl_load_cache_lookup (dl-cache.c:320)
+==11342==    by 0x400A361: _dl_map_object (dl-load.c:2327)
+==11342==    by 0x40150C3: dl_open_worker (dl-open.c:228)
+==11342==    by 0x4B2ED38: _dl_catch_exception (dl-error-skeleton.c:196)
+==11342==    by 0x40149B9: _dl_open (dl-open.c:603)
+==11342==    by 0x4B2DDC0: do_dlopen (dl-libc.c:96)
+==11342==    by 0x4B2ED38: _dl_catch_exception (dl-error-skeleton.c:196)
+==11342==    by 0x4B2EDD2: _dl_catch_error (dl-error-skeleton.c:215)
+==11342==    by 0x4B2DEF4: dlerror_run (dl-libc.c:46)
+==11342==    by 0x4B2DEF4: __libc_dlopen_mode (dl-libc.c:195)
+==11342==    by 0x49BDB1A: pthread_cancel_init (unwind-forcedunwind.c:53)
+==11342== 
+==11342== 36 bytes in 1 blocks are still reachable in loss record 2 of 4
+==11342==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11342==    by 0x400CCA7: _dl_new_object (dl-object.c:163)
+==11342==    by 0x4006A27: _dl_map_object_from_fd (dl-load.c:986)
+==11342==    by 0x4009FFE: _dl_map_object (dl-load.c:2461)
+==11342==    by 0x40150C3: dl_open_worker (dl-open.c:228)
+==11342==    by 0x4B2ED38: _dl_catch_exception (dl-error-skeleton.c:196)
+==11342==    by 0x40149B9: _dl_open (dl-open.c:603)
+==11342==    by 0x4B2DDC0: do_dlopen (dl-libc.c:96)
+==11342==    by 0x4B2ED38: _dl_catch_exception (dl-error-skeleton.c:196)
+==11342==    by 0x4B2EDD2: _dl_catch_error (dl-error-skeleton.c:215)
+==11342==    by 0x4B2DEF4: dlerror_run (dl-libc.c:46)
+==11342==    by 0x4B2DEF4: __libc_dlopen_mode (dl-libc.c:195)
+==11342==    by 0x49BDB1A: pthread_cancel_init (unwind-forcedunwind.c:53)
+==11342== 
+==11342== 384 bytes in 1 blocks are still reachable in loss record 3 of 4
+==11342==    at 0x483CD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11342==    by 0x401274A: _dl_check_map_versions (dl-version.c:274)
+==11342==    by 0x401545C: dl_open_worker (dl-open.c:277)
+==11342==    by 0x4B2ED38: _dl_catch_exception (dl-error-skeleton.c:196)
+==11342==    by 0x40149B9: _dl_open (dl-open.c:603)
+==11342==    by 0x4B2DDC0: do_dlopen (dl-libc.c:96)
+==11342==    by 0x4B2ED38: _dl_catch_exception (dl-error-skeleton.c:196)
+==11342==    by 0x4B2EDD2: _dl_catch_error (dl-error-skeleton.c:215)
+==11342==    by 0x4B2DEF4: dlerror_run (dl-libc.c:46)
+==11342==    by 0x4B2DEF4: __libc_dlopen_mode (dl-libc.c:195)
+==11342==    by 0x49BDB1A: pthread_cancel_init (unwind-forcedunwind.c:53)
+==11342==    by 0x49BDD33: _Unwind_ForcedUnwind (unwind-forcedunwind.c:127)
+==11342==    by 0x49BBEA5: __pthread_unwind (unwind.c:121)
+==11342== 
+==11342== 1,190 bytes in 1 blocks are still reachable in loss record 4 of 4
+==11342==    at 0x483CD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11342==    by 0x400C9E1: _dl_new_object (dl-object.c:73)
+==11342==    by 0x4006A27: _dl_map_object_from_fd (dl-load.c:986)
+==11342==    by 0x4009FFE: _dl_map_object (dl-load.c:2461)
+==11342==    by 0x40150C3: dl_open_worker (dl-open.c:228)
+==11342==    by 0x4B2ED38: _dl_catch_exception (dl-error-skeleton.c:196)
+==11342==    by 0x40149B9: _dl_open (dl-open.c:603)
+==11342==    by 0x4B2DDC0: do_dlopen (dl-libc.c:96)
+==11342==    by 0x4B2ED38: _dl_catch_exception (dl-error-skeleton.c:196)
+==11342==    by 0x4B2EDD2: _dl_catch_error (dl-error-skeleton.c:215)
+==11342==    by 0x4B2DEF4: dlerror_run (dl-libc.c:46)
+==11342==    by 0x4B2DEF4: __libc_dlopen_mode (dl-libc.c:195)
+==11342==    by 0x49BDB1A: pthread_cancel_init (unwind-forcedunwind.c:53)
+==11342== 
+==11342== LEAK SUMMARY:
+==11342==    definitely lost: 0 bytes in 0 blocks
+==11342==    indirectly lost: 0 bytes in 0 blocks
+==11342==      possibly lost: 0 bytes in 0 blocks
+==11342==    still reachable: 1,646 bytes in 4 blocks
+==11342==         suppressed: 0 bytes in 0 blocks
+==11342== 
+==11342== For lists of detected and suppressed errors, rerun with: -s
+==11342== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
