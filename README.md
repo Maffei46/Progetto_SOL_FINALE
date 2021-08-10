@@ -1,1 +1,1 @@
-PROGETTO SOL 2020 - Abramo Maffei - Corso A
+# Progetto di Laboratorio di Sistemi Operativi a.a. 2019-20
